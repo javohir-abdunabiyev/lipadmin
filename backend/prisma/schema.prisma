@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id       String    @id @default(uuid())
+  email    String    @unique
+  password String
+  name     String
+  services Service[]
+}
+
+model Service {
+  id          String            @id @default(uuid())
+  title       String
+  description String?
+  price       Float
+  days        Int
+  imageUrl    String?
+  keywords    String?
+  admin       Admin             @relation(fields: [adminId], references: [id])
+  adminId     String
+  features    ServiceFeature[]
+  benefits    ServiceBenefit[]
+  purposes    ServicePurpose[]
+  createdAt   DateTime          @default(now())
+}
+
+model ServiceFeature {
+  id         String   @id @default(uuid())
+  name       String
+  service    Service  @relation(fields: [serviceId], references: [id])
+  serviceId  String
+}
+
+model ServiceBenefit {
+  id         String   @id @default(uuid())
+  text       String
+  service    Service  @relation(fields: [serviceId], references: [id])
+  serviceId  String
+}
+
+model ServicePurpose {
+  id         String   @id @default(uuid())
+  action     String 
+  detail     String 
+  service    Service  @relation(fields: [serviceId], references: [id])
+  serviceId  String
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  name      String
+  position  String
+  text      String
+  createdAt DateTime @default(now())
+}
+
+model ConsultationRequest {
+  id        String   @id @default(uuid())
+  name      String
+  phone     String
+  agreed    Boolean @default(false)
+  finished  Boolean @default(false)
+  createdAt DateTime @default(now())
+}
