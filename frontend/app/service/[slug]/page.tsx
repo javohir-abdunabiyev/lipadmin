@@ -92,7 +92,7 @@ export default async function ServicePage({ params }: { params: any }) {
 
     return (
         <div className="overflow-x-hidden relative">
-            <div className="absolute sm:top-[30px] top-[70px] left-[-325px] sm:left-[-90px] w-[1000px] sm:h-[900px] h-[600px] overflow-hidden bg-[url('/images/mainbg.svg')] bg-no-repeat sm:bg-top bg-bottom bg-cover z-0 pointer-events-none rotate-[200deg] sm:rotate-35" />
+            <div className="absolute top-[80px] left-1/2 -translate-x-1/2 w-[120vw] max-w-[1600px] h-[800px] bg-[url('/images/mainbg.svg')] bg-cover bg-no-repeat rotate-[35deg] z-0 pointer-events-none" />
 
             <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pt-[100px] flex-grow">
                 <Header />

@@ -43,7 +43,22 @@ export const metadata = {
 export default function About() {
     return (
         <div className="relative overflow-x-hidden">
-            <div className="absolute sm:rotate-40 rotate-200 left-[-20px] sm:right-0 sm:top-0 top-[150px] sm:left-[-430px] w-full sm:h-[900px] h-[600px] bg-[url('/images/mainbg.svg')] bg-no-repeat sm:bg-top bg-top bg-cover z-0 pointer-events-none" />
+            <div
+                className="
+    absolute 
+    top-[150px] sm:top-[70px]
+    left-0 sm:left-[-20vw] 
+    w-full 
+    h-[600px] sm:h-[900px] 
+    rotate-[200deg] sm:rotate-40 
+    bg-[url('/images/mainbg.svg')] 
+    bg-no-repeat 
+    bg-top 
+    bg-cover 
+    z-0 
+    pointer-events-none
+  "
+            />
 
 
             <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pt-[100px] flex-grow">

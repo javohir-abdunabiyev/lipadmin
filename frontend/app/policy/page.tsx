@@ -6,8 +6,8 @@ import { FaArrowLeft } from "react-icons/fa";
 export default function Policity() {
     return (
         <div>
-            <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pt-[100px] flex-grow">
-                <div className="absolute sm:top-[30px] top-[70px] left-[-325px] sm:left-[-90px] w-[1000px] sm:h-[900px] h-[600px] overflow-hidden bg-[url('/images/mainbg.svg')] bg-no-repeat sm:bg-top bg-bottom bg-cover z-0 pointer-events-none rotate-[200deg] sm:rotate-35" />
+            <main className="relative overflow-x-hidden z-10 w-full max-w-[1400px] mx-auto px-6 pt-[100px] flex-grow">
+                <div className="absolute sm:top-[30px] top-[70px] left-1/2 -translate-x-1/2 w-[140vw] max-w-[1600px] sm:h-[900px] h-[600px] bg-[url('/images/mainbg.svg')] bg-no-repeat bg-cover bg-bottom sm:bg-top z-0 pointer-events-none sm:rotate-[35deg] rotate-[200deg]" />
                 <Header />
                 <div>
                     <div className="flex sm:justify-start justify-center mb-[46px] items-center gap-[5px] mt-[50px]">
