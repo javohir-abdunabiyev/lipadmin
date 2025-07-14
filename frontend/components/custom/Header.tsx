@@ -8,7 +8,7 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="bg-[rgba(255,255,255,0.83)] rounded-[50px] py-[15px] shadow w-full z-50 relative">
+        <header className="fixed top-[12px] left-[24px] right-[24px] sm:left-[48px] sm:right-[48px] bg-[rgba(255,255,255,0.83)] backdrop-blur rounded-[50px] py-[15px] shadow z-50">
             <div className="max-w-[1300px] w-full mx-auto px-6 flex items-center justify-between">
                 <Link href="/">
                     <img src="/images/mainLogo.png" alt="Логотип" className="w-[155px]" />
@@ -23,7 +23,7 @@ export default function Header() {
 
                 <div className="hidden md:flex items-center gap-[6px]">
                     <img src="/images/phoneIcon.png" alt="Телефон" />
-                    <p className="font-[700] text-[20px] text-[rgba(214,40,40,1)]">+7 000 000 00 00</p>
+                    <a href="#" className="font-[700] text-[20px] text-[rgba(214,40,40,1)]">+7 000 000 00 00</a>
                 </div>
 
                 <button
@@ -36,8 +36,8 @@ export default function Header() {
             </div>
 
             {menuOpen && (
-                <div className="absolute top-[0px] left-1/2 -translate-x-1/2 w-[90vw] max-w-[400px] bg-white rounded-[24px] shadow-xl py-8 px-6 z-[999] md:hidden">
-                    <div className="flex justify-between mb-[24px] !items-center">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[90vw] max-w-[400px] bg-white rounded-[24px] shadow-xl py-8 px-6 z-[999] md:hidden">
+                    <div className="flex justify-between mb-[24px] items-center">
                         <img src="/images/mainLogo.png" alt="Логотип" className="w-[155px]" />
                         <button
                             className="text-[28px] text-gray-500"

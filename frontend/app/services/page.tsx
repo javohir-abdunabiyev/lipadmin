@@ -43,7 +43,7 @@ export default function AllServices() {
         <div className="overflow-x-hidden relative">
             <div className="sm:hidden absolute top-[110px] left-[-300px] w-[1000px] h-[600px] rotate-[200deg] bg-[url('/images/mainbg.svg')] bg-no-repeat bg-bottom bg-cover z-0 pointer-events-none" />
 
-            <main className="relative mb-[70px] z-10 w-full max-w-[1400px] mx-auto px-6 pt-[20px] flex-grow">
+            <main className="relative mb-[70px] z-10 w-full max-w-[1400px] mx-auto px-6 pt-[100px] flex-grow">
                 <Header />
                 <div className="sm:ml-[20px] mb-[60px] sm:text-left text-center">
                     <div className="flex sm:justify-start justify-center sm:mb-[46px] items-center gap-[5px] mt-[50px]">

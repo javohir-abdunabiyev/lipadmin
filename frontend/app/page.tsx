@@ -42,10 +42,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="h-full ">
+    <div className="">
       <div className="absolute top-0 left-0 w-full sm:h-[900px] h-[600px] bg-[url('/images/mainbg.svg')] bg-no-repeat sm:bg-top bg-bottom bg-cover z-0 pointer-events-none" />
 
-      <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pt-[20px] flex-grow">
+      <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pt-[100px] flex-grow">
         <Header />
 
         <div className="flex flex-col items-center justify-center mt-[30px]">
