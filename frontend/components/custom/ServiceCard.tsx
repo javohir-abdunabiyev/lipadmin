@@ -60,7 +60,7 @@ export default function ServiceCard({
                     </p>
                 </div>
 
-                {service.features.length > 0 && (
+                {service.features?.length > 0 && (
                     <div className="mt-4">
                         <h4 className="font-semibold mb-2">Что входит:</h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300">
@@ -80,7 +80,7 @@ export default function ServiceCard({
                     </div>
                 )}
 
-                {service.benefits.length > 0 && (
+                {service.benefits?.length > 0 && (
                     <div className="mt-4">
                         <h4 className="font-semibold mb-2">Преимущества:</h4>
                         <ul className="list-disc list-inside text-sm text-gray-300">
@@ -91,7 +91,7 @@ export default function ServiceCard({
                     </div>
                 )}
 
-                {service.purposes.length > 0 && (
+                {service.purposes?.length > 0 && (
                     <div className="mt-4">
                         <h4 className="font-semibold mb-2">Назначение услуги:</h4>
                         <ul className="list-disc list-inside text-sm text-gray-300">
@@ -103,6 +103,7 @@ export default function ServiceCard({
                         </ul>
                     </div>
                 )}
+
 
                 {service.keywords && (
                     <div className="mt-4">

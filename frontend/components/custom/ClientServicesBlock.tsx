@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; // ⬅️ добавляем
+import { useRouter } from "next/navigation";
 
 type Feature = { name: string };
 type Benefit = { text: string };
 
 type Service = {
     id: string;
+    slug: string;
     title: string;
     description: string;
     imageUrl: string | null;
@@ -57,7 +58,7 @@ export default function ServicesBlock() {
                 }
             } catch (error) {
                 console.error("Ошибка при загрузке услуг:", error);
-                router.push("/not-found"); 
+                router.push("/not-found");
             }
         };
 
@@ -67,7 +68,7 @@ export default function ServicesBlock() {
     return (
         <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[20px]">
             {services.map((service) => (
-                <Link href={`/service/${service.id}`} key={service.id}>
+                <Link href={`/service/${service.slug}`} key={service.id}> {/* ✅ slug вместо id */}
                     <div className="h-full flex flex-col bg-white border-[2px] border-gray-200 px-[14px] pt-[14px] rounded-xl shadow-md !text-left hover:shadow-lg transition-shadow">
                         {service.imageUrl ? (
                             <img

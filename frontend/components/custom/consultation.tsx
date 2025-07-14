@@ -49,13 +49,16 @@ export default function Consul() {
 
     return (
         <div className="flex justify-center mt-[45px]">
+            <a href="/contacts">
+                <Button className="py-[20px] w-[300px] mb-[60px] h-[70px] px-[36px] rounded-[50px] hover:bg-[] border-[3px] border-[rgba(255,255,255,0.2)] cursor-pointer bg-[rgba(231,25,25,1)] font-semibold text-[20px]">
+                    Получить консультацию
+                </Button>
+            </a>
             <Dialog>
                 <DialogTrigger asChild>
-                    <Button className="py-[20px] w-[300px] mb-[60px] h-[70px] px-[36px] rounded-[50px] hover:bg-[] border-[3px] border-[rgba(255,255,255,0.2)] cursor-pointer bg-[rgba(231,25,25,1)] font-semibold text-[20px]">
-                        Получить консультацию
-                    </Button>
+                    {/* после всего надо поставить кнопку сюда, без тега <a></a> */}
                 </DialogTrigger>
-                <DialogContent className="bg-white rounded-xl max-w-[327px] sm:max-w-[400px] px-6 py-8">
+                <DialogContent className="bg-white rounded-xl max-w-[327px] sm:max-w-[400px] px-6 mt-[-100px] sm:mt-0">
                     <DialogHeader>
                         <DialogTitle className="text-[25px] text-left font-[700] mb-[30px]">
                             Получить консультацию

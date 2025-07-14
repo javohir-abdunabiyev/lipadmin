@@ -85,13 +85,14 @@ async function getService(id: string): Promise<Service | null> {
 }
 
 
+
 export default async function ServicePage({ params }: { params: any }) {
-    const service = await getService(params.id);
+    const service = await getService(params.slug);
     if (!service) return notFound();
 
     return (
         <div className="overflow-x-hidden relative">
-            <div className="absolute sm:top-[30px] top-[70px] left-[-325px] sm:left-[-90px] w-[1000px] sm:h-[900px] h-[600px] overflow-hidden bg-[url('/images/mainbg.png')] bg-no-repeat sm:bg-top bg-bottom bg-cover z-0 pointer-events-none rotate-[200deg] sm:rotate-35" />
+            <div className="absolute sm:top-[30px] top-[70px] left-[-325px] sm:left-[-90px] w-[1000px] sm:h-[900px] h-[600px] overflow-hidden bg-[url('/images/mainbg.svg')] bg-no-repeat sm:bg-top bg-bottom bg-cover z-0 pointer-events-none rotate-[200deg] sm:rotate-35" />
 
             <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pt-[20px] flex-grow">
                 <Header />

@@ -31,7 +31,7 @@ export default function CaseCards() {
 
                     <div className="absolute bottom-[3px] right-[3px] w-[90%] h-[90%] z-0 pointer-events-none">
                         <Image
-                            src="/images/autsortingImg.png"
+                            src="/images/autsortingImg.svg"
                             alt="Аутсорсинг"
                             fill
                             className="object-bottom-right object-contain"
@@ -56,7 +56,7 @@ export default function CaseCards() {
 
                     <div className="absolute top-[3px] right-[3px] w-[90%] h-[90%] z-0 ">
                         <Image
-                            src="/images/autsorting2.png"
+                            src="/images/autsorting2.svg"
                             alt="Поддержка"
                             fill
                             className="object-top-right object-contain"
@@ -82,7 +82,7 @@ export default function CaseCards() {
 
                     <div className="absolute bottom-[3px] left-[3px] w-[100%] h-[100%] z-0 ">
                         <Image
-                            src="/images/autsorting3.png"
+                            src="/images/autsorting3.svg"
                             alt="Поддержка"
                             fill
                             className="object-bottom-left object-contain"
@@ -108,7 +108,7 @@ export default function CaseCards() {
 
                     <div className="absolute bottom-[3px] right-[3px] w-[90%] h-[90%] z-0 ">
                         <Image
-                            src="/images/autsorting4.png"
+                            src="/images/autsorting4.svg"
                             alt="Поддержка"
                             fill
                             className="object-bottom-right object-contain"

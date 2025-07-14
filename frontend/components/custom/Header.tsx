@@ -11,7 +11,7 @@ export default function Header() {
         <header className="bg-[rgba(255,255,255,0.83)] rounded-[50px] py-[15px] shadow w-full z-50 relative">
             <div className="max-w-[1300px] w-full mx-auto px-6 flex items-center justify-between">
                 <Link href="/">
-                    <img src="/images/logo.png" alt="Логотип" className="w-[155px]" />
+                    <img src="/images/mainLogo.png" alt="Логотип" className="w-[155px]" />
                 </Link>
 
                 <nav className="hidden md:flex items-center gap-[60px]">
@@ -38,7 +38,7 @@ export default function Header() {
             {menuOpen && (
                 <div className="absolute top-[0px] left-1/2 -translate-x-1/2 w-[90vw] max-w-[400px] bg-white rounded-[24px] shadow-xl py-8 px-6 z-[999] md:hidden">
                     <div className="flex justify-between mb-[24px] !items-center">
-                        <img src="/images/logo.png" alt="Логотип" className="w-[155px]" />
+                        <img src="/images/mainLogo.png" alt="Логотип" className="w-[155px]" />
                         <button
                             className="text-[28px] text-gray-500"
                             onClick={() => setMenuOpen(false)}

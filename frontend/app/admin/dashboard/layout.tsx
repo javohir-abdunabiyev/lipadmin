@@ -29,9 +29,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div className="flex min-h-screen bg-[#1e263a] text-white">
             <aside className="w-64 bg-[#242c42] px-2 py-6 flex flex-col">
                 <div className='border-r-[1px] border-[#2d3653] w-full h-full px-4'>
-                    <img src="/images/logo.png" alt="Logo" className="h-10 mb-6" />
+                    <img src="/images/mainLogo.png" alt="Logo" className="h-10 mb-6" />
                     <div className="mb-8">
-                        <p className="text-white text-xl font-semibold">{name || 'Загрузка...'}</p>
+                        <p className="text-white text-xl font-semibold">Admin</p>
                         <p className="text-gray-400">Статус: Админ</p>
                     </div>
 

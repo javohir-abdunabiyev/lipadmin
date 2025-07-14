@@ -16,6 +16,7 @@ type Service = {
     description: string;
     imageUrl: string | null;
     features: Feature[];
+    slug: string
 };
 
 const featureIconMap: Record<string, string> = {
@@ -67,8 +68,8 @@ export default function ServicesBlockSlider() {
                 modules={[Navigation]}
                 spaceBetween={20}
                 navigation={{
-                    prevEl: ".swiper-button-prev-custom",
-                    nextEl: ".swiper-button-next-custom",
+                    prevEl: ".swiper-button-prev-services",
+                    nextEl: ".swiper-button-next-services",
                 }}
                 breakpoints={{
                     0: { slidesPerView: 1, spaceBetween: 12 },
@@ -77,7 +78,7 @@ export default function ServicesBlockSlider() {
             >
                 {services.map((service) => (
                     <SwiperSlide key={service.id}>
-                        <Link href={`/service/${service.id}`}>
+                        <Link href={`/service/${service.slug}`}>
                             <div className="h-full min-h-[540px] flex flex-col bg-white border-[2px] border-gray-200 px-[14px] pt-[14px] rounded-xl shadow-md !text-left hover:shadow-lg transition-shadow">
                                 {service.imageUrl ? (
                                     <img
@@ -120,10 +121,10 @@ export default function ServicesBlockSlider() {
             </Swiper>
 
             <div className="flex sm:hidden justify-center gap-3 mt-4">
-                <div className="swiper-button-prev-custom w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
+                <div className="swiper-button-prev-services w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
                     <IoChevronBack size={20} />
                 </div>
-                <div className="swiper-button-next-custom w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
+                <div className="swiper-button-next-services w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
                     <IoChevronForward size={20} />
                 </div>
             </div>

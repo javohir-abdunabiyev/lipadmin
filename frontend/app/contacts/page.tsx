@@ -36,7 +36,7 @@ export const metadata = {
 export default function Contacts() {
     return (
         <div className="overflow-x-hidden relative">
-            <div className="absolute sm:top-[90px] top-[170px] left-[-300px] sm:left-0 w-[1000px] sm:h-[900px] h-[600px] overflow-hidden bg-[url('/images/mainbg.png')] bg-no-repeat sm:bg-top bg-bottom bg-cover z-0 pointer-events-none rotate-[200deg] sm:rotate-22" />
+            <div className="absolute sm:top-[90px] top-[170px] left-[-300px] sm:left-0 w-[1000px] sm:h-[900px] h-[600px] overflow-hidden bg-[url('/images/mainbg.svg')] bg-no-repeat sm:bg-top bg-bottom bg-cover z-0 pointer-events-none rotate-[200deg] sm:rotate-22" />
 
             <main className="relative z-10 w-full pb-[30px] sm:pb-[210px] h-full max-w-[1400px] mx-auto px-6 pt-[20px] flex-grow">
                 <Header />

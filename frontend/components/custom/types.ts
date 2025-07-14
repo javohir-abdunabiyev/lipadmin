@@ -16,6 +16,7 @@ export type Service = {
     price: number;
     days: number;
     purposes: any,
+    slug: any,
     imageUrl?: string;
     keywords?: string;
     features: { name: string }[];

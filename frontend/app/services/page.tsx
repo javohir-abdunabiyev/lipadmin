@@ -41,7 +41,7 @@ export const metadata = {
 export default function AllServices() {
     return (
         <div className="overflow-x-hidden relative">
-            <div className="sm:hidden absolute top-[130px] left-[-300px] w-[1000px] h-[600px] rotate-[200deg] bg-[url('/images/mainbg.png')] bg-no-repeat bg-bottom bg-cover z-0 pointer-events-none" />
+            <div className="sm:hidden absolute top-[110px] left-[-300px] w-[1000px] h-[600px] rotate-[200deg] bg-[url('/images/mainbg.svg')] bg-no-repeat bg-bottom bg-cover z-0 pointer-events-none" />
 
             <main className="relative mb-[70px] z-10 w-full max-w-[1400px] mx-auto px-6 pt-[20px] flex-grow">
                 <Header />

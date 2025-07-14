@@ -64,8 +64,8 @@ export default function ClientReviews() {
             <Swiper
                 modules={[Navigation]}
                 navigation={{
-                    prevEl: ".swiper-button-prev-custom",
-                    nextEl: ".swiper-button-next-custom",
+                    prevEl: ".swiper-button-prev-reviews",
+                    nextEl: ".swiper-button-next-reviews",
                 }}
                 spaceBetween={20}
                 breakpoints={{
@@ -91,10 +91,10 @@ export default function ClientReviews() {
 
             {/* Навигация для мобилок */}
             <div className="flex sm:hidden justify-center gap-3 mt-4">
-                <div className="swiper-button-prev-custom w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
+                <div className="swiper-button-prev-reviews w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
                     <IoChevronBack size={20} />
                 </div>
-                <div className="swiper-button-next-custom w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
+                <div className="swiper-button-next-reviews w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
                     <IoChevronForward size={20} />
                 </div>
             </div>

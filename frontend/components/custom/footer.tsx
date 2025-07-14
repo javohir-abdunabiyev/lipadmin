@@ -8,21 +8,21 @@ export default function Footer() {
             <div className="sm:bg-[rgba(246,246,246,1)] py-[50px] sm:px-[88px] px-[44px]">
                 <div className="sm:flex block justify-between">
                     <div className="sm:flex-col sm:gap-0 sm:justify-start justify-between flex sm:items-start sm:mb-0 mb-[35px] items-center">
-                        <img src="/images/logo.png" alt="Логотип" draggable="false" className="w-[155px] h-[29px]" />
+                        <img src="/images/mainLogo.png" alt="Логотип" draggable="false" className="w-[155px] h-[29px]" />
                         <div className="flex gap-[10px] sm:mt-[31px]">
-                            <Link href={""}>
+                            <Link href={"#"}>
                                 <button className="sm:w-[40px] sm:h-[40px] w-[30px] h-[30px] rounded-full sm:p-[9px] p-[6px] bg-white">
                                     <FaTelegramPlane color="black" size={20} className="sm:w-[20px] w-[16px]" />
                                 </button>
                             </Link>
-                            <Link href={""}>
+                            <Link href={"#"}>
                                 <button className="sm:w-[40px] sm:h-[40px] w-[30px] h-[30px] rounded-full sm:p-[10px] p-[6px] bg-white">
                                     <IoLogoWhatsapp color="black" size={20} className="sm:w-[20px] w-[16px]" />
                                 </button>
                             </Link>
-                            <Link href={""}>
+                            <Link href={"#"}>
                                 <button className="sm:w-[40px] sm:h-[40px] w-[30px] h-[30px] rounded-full sm:p-[10px] py-[8px] bg-white">
-                                    <img src="/images/mail.png" alt="" className="sm:w-[20px] w-[16px] sm:h-[20px] h-[16px]" />
+                                    <img src="/images/mail.svg" alt="" className="sm:w-[20px] w-[16px] sm:h-[20px] h-[16px]" />
                                 </button>
                             </Link>
                         </div>
@@ -35,7 +35,7 @@ export default function Footer() {
                             <Link href={"/about"}>
                                 О нас
                             </Link>
-                            <Link href={"/"}>
+                            <Link href={"/services"}>
                                 Услуги
                             </Link>
                             <Link href={"/contacts"}>
@@ -46,12 +46,12 @@ export default function Footer() {
                             <h4 className="font-bold sm:text-[16px] text-[12px]">Будем рады поговорить</h4>
                             <div className="flex gap-[6px] items-center">
                                 <img src="/images/phoneIcon2.png" alt="Телефон" />
-                                <p className="sm:text-[16px] text-[14px]">+7 000 000 00 00</p>
+                                <a href="tel:+70000000000" className="sm:text-[16px] text-[14px]">+7 000 000 00 00</a>
                             </div>
                             <h4 className="font-bold text-[16px]">Почта</h4>
                             <div className="flex gap-[6px] items-center">
-                                <img src="/images/mail.png" alt="Телефон" />
-                                <p>pochta@pochta.ru</p>
+                                <img src="/images/mail.svg" alt="" />
+                                <a href="mailto:pochta@pochta.ru" className="sm:text-[16px] text-[14px]">pochta@pochta.ru</a>
                             </div>
                         </div>
                     </div>
@@ -60,16 +60,18 @@ export default function Footer() {
                             <h4 className="font-bold text-[16px]">Готовы к росту без лишних затрат?</h4>
                             <p className="text-[14px] sm:text-[16px]">Cвяжитесь с нами — обсудим вашу задачу</p>
                         </div>
-                        <button className="w-[220px] sm:w-[190px] h-[35px] rounded-[50px] border-[2px] border-[rgba(229,9,9,1)] text-[18px] font-[600] text-[rgba(229,9,9,1)] cursor-pointer">
-                            Связаться с нами
-                        </button>
+                        <Link href={"/contacts"}>
+                            <button className="w-[220px] sm:w-[190px] h-[35px] rounded-[50px] border-[2px] border-[rgba(229,9,9,1)] text-[18px] font-[600] text-[rgba(229,9,9,1)] cursor-pointer">
+                                Связаться с нами
+                            </button>
+                        </Link>
 
                     </div>
                 </div>
             </div>
             <div className="sm:flex block text-center sm:gap-[440px] bg-black font-[300] text-[rgba(255,255,255,0.6)] w-full py-[15px] px-[48px] flex-shrink-0">
                 <p className="text-[13px] sm:text-[15px]">2026 Lipadmin Все права защищены ©</p>
-                <p className="text-[13px] sm:text-[15px]">Политика обработки персональных данных</p>
+                <Link href={"/policy"} className="text-[13px] sm:text-[15px]">Политика обработки персональных данных</Link>
             </div>
         </div>
     )

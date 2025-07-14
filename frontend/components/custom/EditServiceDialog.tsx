@@ -22,7 +22,7 @@ export default function EditServiceDialog({
     service,
     setService,
     refetch,
-    fixedOptions,
+    fixedOptions,   
 }: EditServiceDialogProps) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -37,18 +37,23 @@ export default function EditServiceDialog({
     const [newPurpose, setNewPurpose] = useState<{ action: string; detail: string }>({ action: "", detail: "" });
 
     useEffect(() => {
-        if (service) {
-            setTitle(service.title);
-            setDescription(service.description || "");
-            setPrice(service.price.toString());
-            setDays(service.days.toString());
-            setKeywords(service.keywords || "");
-            setImage(null);
-            setBenefits(service.benefits.map((b) => b.text));
-            setSelectedOptions(service.features.map((f) => f.name));
-            setPurposes(service.purposes.map((p: any) => ({ action: p.action, detail: p.detail })));
-        }
+        if (!service) return;
+
+        setTitle(service.title || "");
+        setDescription(service.description || "");
+        setPrice(service.price?.toString() || "");
+        setDays(service.days?.toString() || "");
+        setKeywords(service.keywords || "");
+        setImage(null);
+
+        setBenefits(service.benefits?.map((b) => b.text) || []);
+        setSelectedOptions(service.features?.map((f) => f.name) || []);
+        setPurposes(service.purposes?.map((p: any) => ({
+            action: p.action || "",
+            detail: p.detail || "",
+        })) || []);
     }, [service]);
+
 
     const toggleOption = (name: string) => {
         setSelectedOptions((prev) =>
