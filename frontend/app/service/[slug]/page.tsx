@@ -45,10 +45,9 @@ const featureIconMap: Record<string, string> = {
 };
 
 export async function generateMetadata({ params }: { params: any }) {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/service/${params.id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/service/${params.slug}`, {
         cache: "no-store",
     });
-
     const data = await res.json();
 
     if (!data.success) return {};
@@ -62,14 +61,13 @@ export async function generateMetadata({ params }: { params: any }) {
         openGraph: {
             title: `${service.title} – IT Специалист`,
             description: service.description,
-            url: `${process.env.NEXT_PUBLIC_URL}/service/${params.id}`, // ← замените на реальный домен
+            url: `${process.env.NEXT_PUBLIC_URL}/service/${params.slug}`,
             siteName: "IT Специалист",
             type: "article",
             locale: "ru_RU",
         },
     };
 }
-
 
 async function getService(id: string): Promise<Service | null> {
     try {
