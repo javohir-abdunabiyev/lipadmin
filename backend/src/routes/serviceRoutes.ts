@@ -84,7 +84,7 @@ router.post("/add", upload.single("image"), async (req: any, res: any) => {
             ACL: "public-read",
         }).promise();
 
-        const imageUrl = `${process.env.S3_ENDPOINT}/${key}`;
+        const imageUrl = `${process.env.AWS_S3_ENDPOINT}/${key}`;
 
         // Генерация slug
         const slug = title.toLowerCase()

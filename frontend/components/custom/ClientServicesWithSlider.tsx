@@ -56,10 +56,10 @@ export default function ServicesBlockSlider() {
     return (
         <div className="relative">
             <div className="sm:flex hidden justify-end gap-2 mb-6">
-                <div className="swiper-button-prev-custom w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
+                <div className="swiper-button-prev-services w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
                     <IoChevronBack size={20} />
                 </div>
-                <div className="swiper-button-next-custom w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
+                <div className="swiper-button-next-services w-[47px] h-[47px] rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-100 transition">
                     <IoChevronForward size={20} />
                 </div>
             </div>
