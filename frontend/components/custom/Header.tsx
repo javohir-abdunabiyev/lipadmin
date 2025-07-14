@@ -17,6 +17,7 @@ export default function Header() {
                 <nav className="hidden md:flex items-center gap-[60px]">
                     <Link href="/" className="font-[400] text-[16px]">Главная</Link>
                     <Link href="/about">О нас</Link>
+                    
                     <Link href="/services">Услуги</Link>
                     <Link href="/contacts">Контакты</Link>
                 </nav>
